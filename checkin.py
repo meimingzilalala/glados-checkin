@@ -33,6 +33,7 @@ def start():
         #print(time)
         if sever == 'on':
             requests.get('https://sc.ftqq.com/' + sckey + '.send?text='+mess+'，you have '+time+' days left')
+            requests.get('https://telechan-jade.vercel.app/api/send?sendkey=1706833931T05ba94e8af79a296285d0e22f268ee9e&text='+mess+'，you have '+time+' days left')
     else:
         requests.get('https://sc.ftqq.com/' + sckey + '.send?text=cookie过期')
 
