@@ -8,7 +8,7 @@ sckey = os.environ["SCKEY"]
 # 填入glados账号对应cookie
 cookie = os.environ["COOKIE"]
 #'__cfduid=d3459ec306384ca67a65170f8e2a5bd************; _ga=GA1.2.766373509.1593*****72; _gid=GA1.2.1338236108.***********72; koa:sess=eyJ1c2VySW*********************aXJlIjoxNjE4OTY5NTI4MzY4LCJfbWF4QWdl****0=; koa:sess.sig=6qG8SyMh*****LBc9yRviaPvI'
-
+sckey2=os.environ["SCKEY2"]
 
 
 
@@ -33,7 +33,7 @@ def start():
         #print(time)
         if sever == 'on':
             requests.get('https://sctapi.ftqq.com/' + sckey + '.send?text='+mess+'，you have '+time+' days left')
-            requests.get('https://telechan-jade.vercel.app/api/send?sendkey=1706833931T05ba94e8af79a296285d0e22f268ee9e&text='+mess+'，you have '+time+' days left')
+            requests.get('https://telechan-jade.vercel.app/api/send?sendkey='+sckey2+'&text='+mess+'，you have '+time+' days left')
     else:
         requests.get('https://sc.ftqq.com/' + sckey + '.send?text=cookie过期')
 
